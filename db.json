@@ -1,0 +1,205 @@
+{
+    "movies": [
+        {
+            "title": "Godfather",
+            "genre": "Drama",
+            "rating": "R"
+        },
+        {
+            "title": "Die Hard",
+            "genre": "Action",
+            "rating": "R"
+        },
+        {
+            "title": "The Matrix",
+            "genre": "Action",
+            "rating": "R"
+        },
+        {
+            "title": "John Wick",
+            "genre": "Action",
+            "rating": "R"
+        },
+        {
+            "title": "The Lion King",
+            "genre": "Family",
+            "rating": "G"
+        },
+        {
+            "title": "Halloween",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "Aladdin",
+            "genre": "Family",
+            "rating": "G"
+        },
+        {
+            "title": "The Shining",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "The Exorcist",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "Toy Story",
+            "genre": "Family",
+            "rating": "G"
+        },
+        {
+            "title": "Coco",
+            "genre": "Family",
+            "rating": "PG"
+        },
+        {
+            "title": "Finding Nemo",
+            "genre": "Family",
+            "rating": "G"
+        },
+        {
+            "title": "Monsters, Inc.",
+            "genre": "Family",
+            "rating": "G"
+        },
+        {
+            "title": "Beauty and The Beast",
+            "genre": "Family",
+            "rating": "G"
+        },
+        {
+            "title": "The Terminator",
+            "genre": "Action",
+            "rating": "R"
+        },
+        {
+            "title": "Terminator 2: Judgement Day",
+            "genre": "Action",
+            "rating": "R"
+        },
+        {
+            "title": "John Wick 2",
+            "genre": "Action",
+            "rating": "R"
+        },
+        {
+            "title": "The Dark Knight",
+            "genre": "Action",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Happy Gilmore",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Mean Girls",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Step Brothers",
+            "genre": "Comedy",
+            "rating": "R"
+        },
+        {
+            "title": "Tommy Boy",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Napoleon Dynamite",
+            "genre": "Comedy",
+            "rating": "PG"
+        },
+        {
+            "title": "Big Daddy",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Old School",
+            "genre": "Comedy",
+            "rating": "R"
+        },
+        {
+            "title": "Billy Madison",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "The Waterboy",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Wayne's World",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Grandma's Boy",
+            "genre": "Comedy",
+            "rating": "R"
+        },
+        {
+            "title": "Dumb and Dumber",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Wayne's World 2",
+            "genre": "Comedy",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Friday the 13th",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "Scream",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "Child's Play",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "There Will Be Blood",
+            "genre": "Drama",
+            "rating": "R"
+        },
+        {
+            "title": "A Beautiful Mind",
+            "genre": "Drama",
+            "rating": "PG-13"
+        },
+        {
+            "title": "The Truman Show",
+            "genre": "Drama",
+            "rating": "PG"
+        },
+        {
+            "title": "The Green Mile",
+            "genre": "Drama",
+            "rating": "R"
+        },
+        {
+            "title": "Forrest Gump",
+            "genre": "Drama",
+            "rating": "PG-13"
+        },
+        {
+            "title": "Pulp Fiction",
+            "genre": "Drama",
+            "rating": "R"
+        }
+        
+    ]
+}
