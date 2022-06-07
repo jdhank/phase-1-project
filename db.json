@@ -1,11 +1,13 @@
 {
     "movies": [
         {
+            "id": 0,
             "title": "Godfather",
             "genre": "Drama",
             "rating": "R"
         },
         {
+            "id": 1,
             "title": "Die Hard",
             "genre": "Action",
             "rating": "R"
