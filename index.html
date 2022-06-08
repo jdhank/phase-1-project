@@ -8,6 +8,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
@@ -16,15 +17,30 @@
 <body>
     <nav>
         <div class="nav-wrapper b">   
-           <a href="#" class="brand-logo center">Movie Recommender</a>
+           <a href="#" class="brand-logo center blue darken-4 yellow-text">Movie Recommender</a>
         </div>
     </nav>
     <div id = "container">
         <button class="waves-effect waves-light btn blue darken-4 yellow-text" id = "btn">Click Here For A Random Movie</button>
-        <div class= "blue-text darken-4"id = "output">Not sure what to watch? We have you covered!</div>
-
+        <div class= "blue-text darken-4"id = "randomMovieTitle">Not sure what to watch? We have you covered!</div>
+        <div class= "blue-text darken-4"id = "randomMovieRating"></div>
     </div>
+   <hr>
+  <div id = "genre-container">
+    <a class='dropdown-trigger btn blue darken-4 yellow-text' id = "genreBtn" href='#' data-target='dropdown1'>Movie Genres</a>
 
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">Comedy</a></li>
+    <li><a href="#Drama">Drama</a></li>
+    
+    <li><a href="#!">Family</a></li>
+    <li><a href="#!">Horror</a></li>
+    <li><a href="#!">Action</a></li>
+  </ul>
+        
+
+    </ul>
+</div>
      
     
     <script src="index.js"></script>

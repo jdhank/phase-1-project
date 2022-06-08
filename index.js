@@ -1,9 +1,15 @@
 let btn= document.getElementById('btn')
-let output = document.getElementById('output')
+let randomMovieTitle = document.getElementById('randomMovieTitle')
+let genreButton = document.getElementById('genreBtn')
+let randomMovieRating = document.getElementById('randomMovieRating')
 
 function displayRandomMovie(data){
     let randomMovie = data[Math.floor(Math.random() * data.length)]
-    output.innerHTML = randomMovie.title
+    randomMovieTitle.innerHTML = randomMovie.title
+    randomMovieRating.innerHTML = randomMovie.rating
+
+
+
 
 }
 
@@ -25,14 +31,11 @@ btn.addEventListener('click', (event) => {
     event.preventDefault()
     console.log("clicked")
     getMovies()
-    
-    
-   
 })
 
-    
+genreButton.addEventListener('click', (event) => {
    
-    
-
-
+    console.log("clicked")
+    M.AutoInit();
+})
 
