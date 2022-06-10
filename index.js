@@ -1,4 +1,4 @@
-let btn= document.getElementById('btn')
+let randomBtn= document.getElementById('btn')
 let randomMovieTitle = document.getElementById('randomMovieTitle')
 let genreButton = document.getElementById('genreBtn')
 let randomMovieRating = document.getElementById('randomMovieRating')
@@ -9,40 +9,92 @@ let horror = document.getElementById('horror')
 let action = document.getElementById('action')
 const genreList = document.getElementById("genre-list")
 
-function displayRandomMovie(data){
-    let randomMovie = data[Math.floor(Math.random() * data.length)]
-    randomMovieTitle.innerHTML = randomMovie.title
-    randomMovieRating.innerHTML = randomMovie.rating
-}
-function displayMoviesByGenre(data){
-    const genres = data
-    .map(movie =>{
-        const li = document.createElement("li")
-        
-        li.textContent = movie.title 
-        genreList.append(li)
-         })
-}
 
 function getRandomMovies(){
     fetch("http://localhost:3000/movies")
     .then (response => response.json())
     .then(data => {
         console.log(data);
-        displayRandomMovie(data)
+        let randomMovie = data[Math.floor(Math.random() * data.length)]
+    randomMovieTitle.innerHTML = randomMovie.title
+    randomMovieRating.innerHTML = randomMovie.rating
     })
 }
-function getMoviesByGenre(){
+function getComedy(){
     fetch("http://localhost:3000/movies")
     .then(response => response.json())
     .then(data => {
        console.log(data)
-       displayMoviesByGenre(data)
+       const genres = data
+    .map(movie =>{
+        const li = document.createElement("li")
+        if (movie.genre === "Comedy")
+li.textContent = movie.title 
+        genreList.append(li)
+         })
       })
-    
     }
-    
-btn.addEventListener('click', (event) => {
+
+function getDrama(){
+    fetch("http://localhost:3000/movies")
+    .then(response => response.json())
+    .then(data => {
+       console.log(data)
+       const genres = data
+    .map(movie =>{
+        const li = document.createElement("li")
+        if (movie.genre === "Drama")
+li.textContent = movie.title 
+        genreList.append(li)
+         })
+      })
+    }
+
+function getFamily(){
+    fetch("http://localhost:3000/movies")
+    .then(response => response.json())
+    .then(data => {
+       console.log(data)
+       const genres = data
+    .map(movie =>{
+        const li = document.createElement("li")
+        if (movie.genre === "Family")
+li.textContent = movie.title 
+        genreList.append(li)
+         })
+      })
+    }
+
+function getHorror(){
+    fetch("http://localhost:3000/movies")
+    .then(response => response.json())
+    .then(data => {
+       console.log(data)
+       const genres = data
+    .map(movie =>{
+        const li = document.createElement("li")
+        if (movie.genre === "Horror")
+li.textContent = movie.title 
+        genreList.append(li)
+         })
+      })
+    }
+ 
+function getAction(){
+    fetch("http://localhost:3000/movies")
+    .then(response => response.json())
+    .then(data => {
+       console.log(data)
+       const genres = data
+    .map(movie =>{
+        const li = document.createElement("li")
+        if (movie.genre === "Action")
+li.textContent = movie.title 
+        genreList.append(li)
+         })
+      })
+    }    
+randomBtn.addEventListener('click', (event) => {
     event.preventDefault()
     console.log("clicked random button")
     getRandomMovies()
@@ -50,27 +102,44 @@ btn.addEventListener('click', (event) => {
 
 genreButton.addEventListener('click', (event) => {
     console.log("clicked genre button")
-    
- 
 })
 
+comedy.addEventListener('click', (event) => {
+    console.log("clicked comedy button")
+    genreList.innerHTML = ""
+    getComedy()
+    
+})
+drama.addEventListener('click', (event) => {
+    console.log("clicked drama button")
+    genreList.innerHTML = ""
+    getDrama()
+})
+
+family.addEventListener('click', (event) => {
+    console.log("clicked family button")
+    genreList.innerHTML = ""
+    getFamily()
+})
+
+horror.addEventListener('click', (event) => {
+    console.log("clicked horror button")
+    genreList.innerHTML = ""
+    getHorror()
+})
+
+action.addEventListener('click', (event) => {
+    console.log("clicked action button")
+    genreList.innerHTML = ""
+    getAction()
+})
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var options = {}
     var instances = M.Dropdown.init(elems, options);
   });
 
-  comedy.addEventListener('click', (event) => {
-    console.log("clicked comedy button")
-    genreList.innerHTML = ""
-    getMoviesByGenre()
-    const filteredMovie = genreList.filter(movie => 
-        movie.genre === "Comedy")
-    filteredMovie()
 
-    
-
-  })
 
 
 
