@@ -17,7 +17,7 @@ function getRandomMovies(){
         console.log(data);
         let randomMovie = data[Math.floor(Math.random() * data.length)]
     randomMovieTitle.innerHTML = randomMovie.title
-    randomMovieRating.innerHTML = randomMovie.rating
+    randomMovieRating.innerHTML = `Rating: ${randomMovie.rating}`
     })
 }
 function getComedy(){
@@ -29,7 +29,7 @@ function getComedy(){
     .map(movie =>{
         const li = document.createElement("li")
         if (movie.genre === "Comedy")
-li.textContent = movie.title 
+li.textContent = `${movie.title} - Rating: ${movie.rating} `
         genreList.append(li)
          })
       })
@@ -44,7 +44,7 @@ function getDrama(){
     .map(movie =>{
         const li = document.createElement("li")
         if (movie.genre === "Drama")
-li.textContent = movie.title 
+li.textContent = `${movie.title} - Rating: ${movie.rating} `
         genreList.append(li)
          })
       })
@@ -59,7 +59,7 @@ function getFamily(){
     .map(movie =>{
         const li = document.createElement("li")
         if (movie.genre === "Family")
-li.textContent = movie.title 
+li.textContent = `${movie.title} - Rating: ${movie.rating} ` 
         genreList.append(li)
          })
       })
@@ -74,7 +74,7 @@ function getHorror(){
     .map(movie =>{
         const li = document.createElement("li")
         if (movie.genre === "Horror")
-li.textContent = movie.title 
+li.textContent =  `${movie.title} - Rating: ${movie.rating} `
         genreList.append(li)
          })
       })
@@ -89,7 +89,7 @@ function getAction(){
     .map(movie =>{
         const li = document.createElement("li")
         if (movie.genre === "Action")
-li.textContent = movie.title 
+li.textContent =  `${movie.title} - Rating: ${movie.rating} `
         genreList.append(li)
          })
       })
