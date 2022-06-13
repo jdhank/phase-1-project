@@ -201,7 +201,33 @@
             "title": "Pulp Fiction",
             "genre": "Drama",
             "rating": "R"
+        },
+        {
+            "title": "Ambulance",
+            "genre": "Action",
+            "rating": "R"
+        },
+        {
+            "title": "Saw",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "Texas Chainsaw Massacre",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "Us",
+            "genre": "Horror",
+            "rating": "R"
+        },
+        {
+            "title": "Get Out",
+            "genre": "Horror",
+            "rating": "R"
         }
+
         
     ]
 }
