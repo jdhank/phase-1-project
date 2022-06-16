@@ -79,8 +79,12 @@ action.addEventListener('click', (event) => {
     getGenre("Action")
 })
 
-nav.addEventListener('click', (event) => {
-    console.log("clicked nav")
+randomBtn.addEventListener('mouseover', (event) => {
+    console.log("over nav")
+    randomBtn.textContent = "We Hope You Enjoy Your Movie!"
+    
+    
+    
 })
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
