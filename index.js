@@ -40,6 +40,9 @@ function getGenre(genre){
         })
 }
 
+function makeBold(){
+    randomMovieTitle.style.fontWeight = "bold"
+}
 randomBtn.addEventListener('click', (event) => {
     event.preventDefault()
     console.log("clicked random button")
@@ -82,9 +85,7 @@ action.addEventListener('click', (event) => {
 randomBtn.addEventListener('mouseover', (event) => {
     console.log("over nav")
     randomBtn.textContent = "We Hope You Enjoy Your Movie!"
-    
-    
-    
+    makeBold()
 })
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
