@@ -19,21 +19,16 @@ function getMovies(){
 }
 
 function getRandomMovies(){
-    fetch("http://localhost:3000/movies")
-    .then (response => response.json())
-    .then(data => {
-        console.log(data);
-        let randomMovie = data[Math.floor(Math.random() * data.length)]
+    randomMovie = movies[Math.floor(Math.random() * movies.length)]
         randomMovieTitle.innerHTML = randomMovie.title
         randomMovieRating.innerHTML = `Rating: ${randomMovie.rating}`
-    })
+    
 }
 
 function getGenre(genre){
         movies.forEach(movie =>{
             const li = document.createElement("li")
             if (movie.genre === genre){
-                
                 li.textContent = `${movie.title} - Rating: ${movie.rating} `
                 genreList.append(li)
             }   
@@ -42,12 +37,12 @@ function getGenre(genre){
 
 function makeBold(){
     randomMovieTitle.style.fontWeight = "bold"
+    randomBtn.textContent = "We Hope You Enjoy Your Movie!"
+
 }
-randomBtn.addEventListener('click', (event) => {
-    event.preventDefault()
-    console.log("clicked random button")
-    getRandomMovies()
-})
+randomBtn.addEventListener('click', getRandomMovies)
+
+randomBtn.addEventListener('mouseover', makeBold)
 
 genreButton.addEventListener('click', (event) => {
     console.log("clicked genre button")
@@ -82,15 +77,12 @@ action.addEventListener('click', (event) => {
     getGenre("Action")
 })
 
-randomBtn.addEventListener('mouseover', (event) => {
-    console.log("over nav")
-    randomBtn.textContent = "We Hope You Enjoy Your Movie!"
-    makeBold()
-})
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var options = {}
-    var instances = M.Dropdown.init(elems, options);
+    let elems = document.querySelectorAll('.dropdown-trigger');
+    let options = {}
+    let instances = M.Dropdown.init(elems, options);
     getMovies()
   });
 
