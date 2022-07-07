@@ -2,14 +2,10 @@ let randomBtn= document.getElementById('btn')
 let randomMovieTitle = document.getElementById('randomMovieTitle')
 let genreButton = document.getElementById('genreBtn')
 let randomMovieRating = document.getElementById('randomMovieRating')
-// let comedy = document.getElementById('comedy')
-// let drama = document.getElementById('drama')
-// let family = document.getElementById('family')
-// let horror = document.getElementById('horror')
-// let action = document.getElementById('action')
 const genreList = document.getElementById("genre-list")
 let nav = document.getElementById("nav")
 let movies
+let genre
 function getMovies(){
     fetch("http://localhost:3000/movies")
     .then(response => response.json())
@@ -33,22 +29,15 @@ function makeDropdownButtons(){
         genreATag.textContent = genre
         genreATag.href = "#!"
         li.id = genre
-        li.addEventListener('click', console.log(genre))
         let dropdown = document.getElementById('dropdown1')
         li.append(genreATag)
         dropdown.append(li)
-
-
-    
     })
-    
 }
 
 function getGenre(genre){
         movies.forEach(movie =>{
-            
             const li = document.createElement("li")
-
             if (movie.genre === genre){
                 li.textContent = `${movie.title} - Rating: ${movie.rating} `
                 genreList.append(li)
@@ -65,12 +54,11 @@ randomBtn.addEventListener('click', getRandomMovies)
 
 randomBtn.addEventListener('mouseover', makeBold)
 
-genreButton.addEventListener('click', (event) => {
-    console.log("clicked genre button")
+dropdown1.addEventListener('click', (event) => {
+    console.log(event.target.textContent)
+    genreList.innerHTML = ""
+    getGenre(event.target.textContent)
 })
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
